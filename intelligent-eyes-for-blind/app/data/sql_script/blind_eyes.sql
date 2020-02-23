@@ -1,13 +1,14 @@
 CREATE DATABASE IF NOT EXISTS `blind_eyes`;
 USE `blind_eyes`;
 
-DROP TBALE IF EXISTS `user`;
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user`
 (
     `id`           bigint(20) unsigned    NOT NULL AUTO_INCREMENT,
     `first_name`   varchar(50)         NOT NULL,
     `last_name`    varchar(50)         NOT NULL,
     `email`        varchar(50)         NOT NULL,
+    `password`     varchar(50)         NOT NULL,
     `phone_number` varchar(15)         NOT NULL,
     `created_at`   datetime(3)         NOT NULL,
     PRIMARY KEY (`id`),
@@ -22,7 +23,7 @@ DROP TABLE IF EXISTS `text`;
 CREATE TABLE `text`
 (
     `id`               bigint(20) unsigned    NOT NULL AUTO_INCREMENT,
-    `text`             varchar(50)    NOT NULL,
+    `text`             varchar(100)    NOT NULL,
     `user_id`          bigint(20) unsigned NOT NULL,
     `created_at`       datetime(3)         NOT NULL,
     PRIMARY KEY (`id`),

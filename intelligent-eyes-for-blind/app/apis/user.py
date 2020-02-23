@@ -13,6 +13,7 @@ def create_user(**kwargs):
         message.first_name = kwargs.get('first_name')
         message.last_name = kwargs.get('last_name')
         message.email = kwargs.get('email')
+        message.password = kwargs.get('password')
         message.phone_number = kwargs.get('phone_number')
 
         user_helper = UserHelper(message)

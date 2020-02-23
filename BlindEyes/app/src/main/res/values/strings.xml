@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BlindEyes</string>
+    <string name="title_activity_text_processing">TextProcessing</string>
+</resources>

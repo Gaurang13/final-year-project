@@ -10,6 +10,7 @@ def set_user(conn, message):
         "first_name": message.first_name,
         "last_name": message.last_name,
         "email": message.email,
+        "password": message.password,
         "phone_number": message.phone_number,
         "created_at": message.current_timestamp
     }, sql_stmt=sql_scripts['set_user'])

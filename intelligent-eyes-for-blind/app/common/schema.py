@@ -18,6 +18,7 @@ class UserSchema(Schema):
     first_name = fields.String(required=True, validate=validate.Length(min=1, max=50))
     last_name = fields.String(required=True, validate=validate.Length(min=1, max=50))
     email = fields.String(required=True, validate=validate.Length(min=1, max=50))
+    password = fields.String(required=True, validate=validate.Length(min=1, max=50))
     phone_number = fields.String(required=True, validate=validate.Length(min=10, max=15))
 
     @validates('email')
@@ -29,4 +30,8 @@ class UserSchema(Schema):
 
 class UserResponseSchema(Schema):
     user_id = fields.Int()
+    text_id = fields.Int()
+    text = fields.String()
     ok = fields.Boolean(default=True)
+    status = fields.String()
+
